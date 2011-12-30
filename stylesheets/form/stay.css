@@ -1,0 +1,21 @@
+#stay_date_start input[type="text"],
+#stay_date_end input[type="text"] {
+  width: 14.25em;
+}
+
+#stay_date_start_input + img.ui-datepicker-trigger,
+#stay_date_end_input + img.ui-datepicker-trigger {
+  cursor: pointer;
+  display: block;
+  float: right;
+  padding: 0.25em;
+  padding-left: 0;
+  height: 1.75em;
+  width: 1.75em;
+}
+
+#stay_transport > ul,
+#stay_hotel_standard > ul,
+#stay_meals_standard > ul {
+  width: 36.875em;
+}

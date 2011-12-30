@@ -1,0 +1,11 @@
+#person_gender {
+  width: 8em;
+}
+
+#person_gender ul {
+  width: 7em;
+}
+
+#person_document_scan input[type="file"] {
+  width: 36.875em;
+}

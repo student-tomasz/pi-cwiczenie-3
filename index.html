@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <meta http-equiv='Content-Language' content='pl' />
+    <meta name='Description' content='Projekt do ćwiczenia nr 3 z przedmiotu
+      Programowanie internetowe 2011/2012.' />
+    <meta name='Author' content='cudzilot' />
+
+    <title>
+      Programowanie internetowe 2011/2012
+      &raquo; Ćwiczenie 3
+    </title>
+
+    <link rel='index' title='Spis projektów z przedmiotu Programowanie internetowe 2011/2012' href='../' />
+
+    <link href='shared/stylesheets/style.css' type='text/css' rel='stylesheet' media='all' />
+    <link href='shared/favicon.ico' type='image/ico' rel='shortcut icon' />
+
+    <script src='shared/vendor/javascripts/jquery-latest.min.js' type='text/javascript'></script>
+    <script src='shared/vendor/javascripts/prettify-latest/prettify.js' type='text/javascript'></script>
+    <link href='shared/vendor/javascripts/prettify-latest/prettify.css' type='text/css' rel='stylesheet' />
+
+    <script src='vendor/javascripts/jquery-ui-1.8.16.datepicker-only/js/jquery-ui-1.8.16.custom.min.js' type='text/javascript'></script>
+    <link href='vendor/javascripts/jquery-ui-1.8.16.datepicker-only/css/ui-lightness/jquery-ui-1.8.16.custom.css' type='text/css' rel='stylesheet' media='all' />
+
+    <link href='stylesheets/style.css' type='text/css' rel='stylesheet' media='all' />
+    <link href='stylesheets/form.css' type='text/css' rel='stylesheet' media='all' />
+  </head>
+  <body id='project-3'>
+    <h1 id='header'>121. konferencja naukowa stowarzyszenia <span class='ieee'>IEEE</span></h1>
+    <h2 id='subheader'>Kraków, 1-4 lipca 2012</h2>
+
+    <form action='http://www.iem.pw.edu.pl/~ksiwek/prpw/cgi/prog.php' id='registration' method='post' name='registration'>
+      <h3 id='title'>Formularz zgłoszeniowy</h3>
+      <fieldset id='person' class='first'>
+        <div id='person_aside' class='aside'>
+          <label id='person_label'>Dane osobowe</label>
+        </div>
+        <ul>
+          <li id='person_first_name' class='horizontal'>
+            <label id='person_first_name_label' for='person_first_name_input'>Imię/Imiona</label>
+            <input id='person_first_name_input' name='person[first_name]' type='text' />
+          </li>
+          <li id='person_last_name' class='horizontal last'>
+            <label id='person_last_name_label' for='person_last_name_input'>Nazwisko</label>
+            <input id='person_last_name_input' name='person[last_name]' type='text' />
+          </li>
+          <li id='person_gender' class='horizontal-options'>
+            <label id='person_gender_label'>Płeć</label>
+            <ul id='person_gender_input'>
+              <li>
+                <label for='person_gender_male_input'>
+                  <input id='person_gender_male_input' name='person[gender]' type='radio' value='male' />
+                  <span id='person_gender_male_label'>M</span>
+                </label>
+              </li>
+              <li>
+                <label for='person_gender_female_input'>
+                  <input id='person_gender_female_input' name='person[gender]' type='radio' value='female' />
+                  <span id='person_gender_female_label'>K</span>
+                </label>
+              </li>
+            </ul>
+          </li>
+          <li id='person_document_scan'>
+            <label id='person_document_scan_label' for='person_document_scan_input'>Skan dowodu</label>
+            <input id='person_document_scan_input' name='person[document_scan]' type='file' />
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset id='account'>
+        <div id='account_aside' class='aside'>        
+          <label id='account_label'>Dane konta</label>
+        </div>
+        <ul>
+          <li>
+            <label id='account_login_label' for='account_login_input'>Login</label>
+            <input id='account_login_input' name='account[login]' type='text' />
+          </li>
+          <li id='account_password' class='horizontal'>
+            <label id='account_password_label' for='account_password_input'>Hasło</label>
+            <input id='account_password_input' name='account[password]' type='password' />
+          </li>
+          <li id='account_password_confirm' class='horizontal last'>
+            <label id='account_password_confirm_label' for='account_password_confirm_input'>Potwierdzenie hasła</label>
+            <input id='account_password_confirm_input' name='account[password_confirm]' type='password' />
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset id='stay'>
+        <div id='stay_aside' class='aside'>        
+          <label id='stay_label'>Dojazd i pobyt</label>
+        </div>
+        <ul>
+          <li id='stay_date_start' class='horizontal'>
+            <label id='stay_date_start_label' for='stay_date_start_input'>Data przyjazdu</label>
+            <input id='stay_date_start_input' name='stay[date_start]' type='text' />
+          </li>
+          <li id='stay_date_end' class='horizontal last'>
+            <label id='stay_date_end_label' for='stay_date_end_input'>Data wyjazdu</label>
+            <input id='stay_date_end_input' name='stay[date_end]' type='text' />
+          </li>
+          <li id='stay_transport' class='horizontal-options'>
+            <label id='stay_transport_label'>Sposób transportu</label>
+            <ul id='stay_transport_input'>
+              <li>
+                <label for='stay_transport_airplane_input'>
+                  <input id='stay_transport_airplane_input' name='stay[transport]' type='radio' value='airplane' />
+                  <span id='stay_transport_airplane_label'>samolot</span>
+                </label>
+              </li>
+              <li>
+                <label for='stay_transport_ferry_input'>
+                  <input id='stay_transport_ferry_input' name='stay[transport]' type='radio' value='ferry' />
+                  <span id='stay_transport_ferry_label'>prom</span>
+                </label>
+              </li>
+              <li>
+                <label for='stay_transport_self_input'>
+                  <input id='stay_transport_self_input' name='stay[transport]' type='radio' value='self' />
+                  <span id='stay_transport_self_label'>dojazd własny</span>
+                </label>
+              </li>
+            </ul>
+          </li>
+          <li id='stay_hotel_standard' class='horizontal-options'>
+            <label id='stay_hotel_standard_label'>Standard hotelu</label>
+            <ul id='stay_hotel_standard_input'>
+              <li>
+                <label for='stay_hotel_standard_5_input'>
+                  <input id='stay_hotel_standard_5_input' name='stay[hotel][standard]' type='radio' value='5' />
+                  <span id='stay_hotel_standard_5_label'>5-gwiazdkowy</span>
+                </label>
+              </li>
+              <li>
+                <label for='stay_hotel_standard_4_input'>
+                  <input id='stay_hotel_standard_4_input' name='stay[hotel][standard]' type='radio' value='4' />
+                  <span id='stay_hotel_standard_4_label'>4-gwiazdkowy</span>
+                </label>
+              </li>
+              <li>
+                <label for='stay_hotel_standard_3_input'>
+                  <input id='stay_hotel_standard_3_input' name='stay[hotel][standard]' type='radio' value='3' />
+                  <span id='stay_hotel_standard_3_label'>3-gwiazdkowy</span>
+                </label>
+              </li>
+              <li>
+                <label for='stay_hotel_standard_hostel_input'>
+                  <input id='stay_hotel_standard_hostel_input' name='stay[hotel][standard]' type='radio' value='0' />
+                  <span id='stay_hotel_standard_hostel_label'>hostel</span>
+                </label>
+              </li>
+            </ul>
+          </li>
+          <li id='stay_meals_standard' class='horizontal-options'>
+            <label id='stay_meals_standard_label'>Standard posiłków</label>
+            <ul id='stay_meals_standard_input'>
+              <li>
+                <label for='stay_meals_standard_full_input'>
+                  <input id='stay_meals_standard_full_input' name='stay[meals][standard]' type='radio' value='3' />
+                  <span id='stay_meals_standard_full_label'>pełny pakiet</span>
+                </label>
+              </li>
+              <li>
+                <label for='stay_meals_standard_medium_input'>
+                  <input id='stay_meals_standard_medium_input' name='stay[meals][standard]' type='radio' value='2' />
+                  <span id='stay_meals_standard_medium_label'>śniadanie i kolacja</span>
+                </label>
+              </li>
+              <li>
+                <label for='stay_meals_standard_small_input'>
+                  <input id='stay_meals_standard_small_input' name='stay[meals][standard]' type='radio' value='1' />
+                  <span id='stay_meals_standard_small_label'>tylko śniadanie</span>
+                </label>
+              </li>
+              <li>
+                <label for='stay_meals_standard_none_input'>
+                  <input id='stay_meals_standard_none_input' name='stay[meals][standard]' type='radio' value='0' />
+                  <span id='stay_meals_standard_none_label'>brak</span>
+                </label>
+              </li>
+            </ul>
+          </li>
+          <li id='stay_meals_vegetarian' class='vertical-options'>
+            <label id='stay_meals_variants_label'>Wariant posiłków:</label>
+            <ul>
+              <li>
+                <label for='stay_meals_vegetarian_input'>
+                  <input name='stay[meals][vegetarian]' type='hidden' value='false' />
+                  <input id='stay_meals_vegetarian_input' name='stay[meals][vegetarian]' type='checkbox' value='true' />
+                  <span id='stay_meals_vegetarian_label'>posiłki wegetariańskie</span>
+                </label>
+              </li>
+            </ul>
+          </li>
+          <li id='stay_meals_banquet' class='vertical-options'>
+            <label id='stay_meals_banquet_label'>Udział w bankietach:</label>
+            <ul>
+              <li>
+                <label for='stay_meals_banquet_first_day_input'>
+                  <input name='stay[meals][banquet][first_day]' type='hidden' value='false' />
+                  <input id='stay_meals_banquet_first_day_input' name='stay[meals][banquet][first_day]' type='checkbox' value='true' />
+                  <span id='stay_meals_banquet_first_day_label'>bankiet inauguracyjny</span>
+                </label>
+              </li>
+              <li>
+                <label for='stay_meals_banquet_last_day_input'>
+                  <input name='stay[meals][banquet][last_day]' type='hidden' value='false' />
+                  <input id='stay_meals_banquet_last_day_input' name='stay[meals][banquet][last_day]' type='checkbox' value='true' />
+                  <span id='stay_meals_banquet_last_day_label'>bankiet zakończeniowy</span>
+                </label>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <div class='aside'>        
+          <label id='trips_label'>Wycieczki</label>
+        </div>
+        <ul>
+          <li id='trips_second_day' class='vertical-options'>
+            <label id='trips_second_day_label'>Dzień 2. konferencji</label>
+            <ul>
+              <li>
+                <label for='trips_royal_input'>
+                  <input id='trips_royal_input' name='trips[second_day]' type='radio' value='royal' />
+                  <span id='trips_royal_label'>Droga Królewska - <em>Via Regia</em></span>
+                </label>
+              </li>
+              <li>
+                <label for='trips_jewish_input'>
+                  <input id='trips_jewish_input' name='trips[second_day]' type='radio' value='jewish' />
+                  <span id='trips_jewish_label'>Trasa Zabytków Żydowskich</span>
+                </label>
+              </li>
+              <li>
+                <label for='trips_second_day_none_input'>
+                  <input id='trips_second_day_none_input' name='trips[second_day]' checked='checked' type='radio' value='none' />
+                  <span id='trips_second_day_none_label'>brak</span>
+                </label>
+              </li>
+            </ul>
+          </li>
+          <li id='trips_third_day' class='vertical-options'>
+            <label id='trips_third_day_label'>Dzień 3. konferencji</label>
+            <ul id='trips_third_day_input'>
+              <li>
+                <label for='trips_condemned_input'>
+                  <input id='trips_condemned_input' name='trips[third_day]' type='radio' value='condemned' />
+                  <span id='trips_condemned_label'>Droga Skazańców - <em>Via Dolorosa</em></span>
+                </label>
+              </li>
+              <li>
+                <label for='trips_uni_input'>
+                  <input id='trips_uni_input' name='trips[third_day]' type='radio' value='uni' />
+                  <span id='trips_uni_label'>Trasa Uniwersytecka</span>
+                </label>
+              </li>
+              <li>
+                <label for='trips_pope_input'>
+                  <input id='trips_pope_input' name='trips[third_day]' type='radio' value='pope' />
+                  <span id='trips_pope_label'>Trasa &quot;Ścieżkami Jana Pawła II&quot;</span>
+                </label>
+              </li>
+              <li>
+                <label for='trips_third_day_none_input'>
+                  <input id='trips_third_day_none_input' name='trips[third_day]' checked='checked' type='radio' value='none' />
+                  <span id='trips_third_day_none_label'>brak</span>
+                </label>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <div id='comments_aside' class='aside'>
+          <label id='comments_label'>Komentarz</label>
+          <p id='comments_hint'><span id='comments_hint_label'>zostało znaków </span><span id='comments_char_counter'>500</span></p>
+        </div>
+        <ul>
+          <li id='comments'>
+            <textarea id='comments_input' name='comments' cols='20' rows='12'></textarea>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <div id='payment_aside' class="aside">
+          <label id='payment_label'>Płatność</label>
+        </div>
+        <ul>
+          <li id='payment_email'>
+            <label id='payment_email_label' for='payment_email_input'>Adres email</label>
+            <input id='payment_email_input' name='payment[email]' type='text' />
+          </li>
+          <li id='payment_credit_card'>
+            <label id='payment_credit_card_label' for='payment_credit_card_input'>Numer karty kredytowej</label>
+            <input id='payment_credit_card_input' name='payment[credit_card]' type='text' />
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset id='summary'>
+        <div id='i18n'>
+          <ul id='language' class='i18n-choices'>
+            <li id='language_en'>
+              <label for='language_en_input'>
+                <input id='language_en_input' name='language' type='radio' value='en' />
+                <span id='language_en_label'>English</span>
+              </label>
+            </li>
+            <li id='language_pl'>
+              <label class='active' for='language_pl_input'>
+                <input id='language_pl_input' checked='checked' name='language' type='radio' value='pl' />
+                <span id='language_pl_label'>Polski</span>
+              </label>
+            </li>
+          </ul>
+          <ul id='currency'>
+            <li id='currency_usd'>
+              <label for='currency_usd_input'>
+                <input id='currency_usd_input' name='currency' type='radio' value='usd' />
+                <span id='currency_usd_label'>USD</span>
+              </label>
+            </li>
+            <li id='currency_eur'>
+              <label for='currency_eur_input'>
+                <input id='currency_eur_input' name='currency' type='radio' value='eur' />
+                <span id='currency_eur_label'>EUR</span>
+              </label>
+            </li>
+            <li id='currency_pln'>
+              <label class='active' for='currency_pln_input'>
+                <input id='currency_pln_input' checked='checked' name='currency' type='radio' value='pln' />
+                <span id='currency_pln_label'>PLN</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div id='summary_checkout'>
+          <label id='summary_checkout_label'>Do zapłaty</label>
+          <input id='summary_checkout_input' disabled='disabled' type='text' value='0 PLN' />
+        </div>
+        <div id='summary_submit'>
+          <input id='summary_submit_input' type='submit' value='Zarejestruj' />
+        </div>
+      </fieldset>
+    </form>
+
+    <div id='validations'>
+      <h2>Walidacje</h2>
+      <ul>
+        <li id='html_validation'>
+          <a href='#'>
+            <img alt='Valid XHTML 1.0 Strict' src='shared/images/valid-xhtml-1.0.png' style='border 0; height 31px; width 88px;' />
+          </a>
+        </li>
+        <li id='css_validation'>
+          <a href='#'>
+            <img alt='Valid CSS!' src='shared/images/valid-css.gif' style='border 0; height 31px; width 88px;' />
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script type='text/javascript' src='shared/javascripts/insert-source.js'></script>
+    <script type='text/javascript' src='shared/javascripts/insert-validations.js'></script>
+
+    <script src='javascripts/helpers.js' type='text/javascript'></script>
+    <script src='javascripts/validator.js' type='text/javascript'></script>
+    <script src='javascripts/calculator.js' type='text/javascript'></script>
+    <script src='javascripts/dictionaries/person.js' type='text/javascript'></script>
+    <script src='javascripts/dictionaries/account.js' type='text/javascript'></script>
+    <script src='javascripts/dictionaries/stay.js' type='text/javascript'></script>
+    <script src='javascripts/dictionaries/comments.js' type='text/javascript'></script>
+    <script src='javascripts/dictionaries/payment.js' type='text/javascript'></script>
+    <script src='javascripts/dictionaries/summary.js' type='text/javascript'></script>
+    <script src='javascripts/dictionaries/errors.js' type='text/javascript'></script>
+    <script src='javascripts/translator.js' type='text/javascript'></script>
+    <script src='javascripts/watchers/stay.js' type='text/javascript'></script>
+    <script src='javascripts/watchers/comments.js' type='text/javascript'></script>
+    <script src='javascripts/watchers/summary.js' type='text/javascript'></script>
+    <script type='text/javascript'>
+      var validator,
+          calculator,
+          translator;
+
+      window.onload = function() {
+        validator = new Validator();
+        validator.init();
+
+        calculator = new Calculator();
+        calculator.init();
+
+        translator = new Translator();
+        translator.init();
+
+        (new StayWatcher()).init();
+        (new CommentsWatcher()).init();
+        (new SummaryWatcher()).init();
+      };
+    </script>
+  </body>
+</html>

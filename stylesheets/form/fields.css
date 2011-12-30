@@ -1,0 +1,111 @@
+form {
+  border: thin solid #333;
+  margin: 0;
+  padding: 0 1em;
+  position: relative;
+  width: 48em;
+}
+
+fieldset {
+  margin: 0;
+  padding: 1em 0;
+  border-top: thin solid #ddd;
+}
+
+fieldset > .aside {
+  display: block;
+  float: left;
+  margin: 1em 1em 0 0;
+  padding: 0;
+  width: 9em;
+}
+
+fieldset > .aside > label {
+  font-weight: bold;
+}
+
+fieldset > ul {
+  margin: 0 0 0 10em;
+  padding: 0;
+  width: 38em;
+  list-style: none;
+}
+
+fieldset > ul > li {
+  margin-top: 0.5em;
+}
+
+fieldset > ul > li > label {
+  display: block;
+  margin: 0;
+  padding: 0.5em;
+}
+
+fieldset > ul > li.horizontal {
+  display: inline-block;
+  margin-right: 1em;
+  width: 18em;
+}
+
+fieldset > ul > li.horizontal.last {
+  margin-right: 0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"],
+textarea,
+fieldset > ul > li.horizontal-options > ul {
+  background: white url('../../images/input-bg.gif') repeat-x top left;
+  border: thin solid #bbb;
+  margin: 0;
+  padding: 0.5em;
+  width: 17em;
+  list-style: none;
+}
+
+input[type="text"].invalid,
+input[type="password"].invalid,
+input[type="file"].invalid,
+textarea.invalid,
+fieldset > ul > li.horizontal-options > ul.invalid {
+  border-color: #da251c;
+}
+
+fieldset > ul > li.horizontal-options > ul > li {
+  display: inline-block;
+  margin-left: 1em;
+}
+
+fieldset > ul > li.horizontal-options > ul > li:first-child {
+  margin-left: 0;
+}
+
+fieldset > ul > li.vertical-options {
+  margin: 1.5em 0 0 0.5em;
+}
+
+fieldset > ul > li.vertical-options > label {
+  display: block;
+  float: left;
+  margin: 0 1em 0 0;
+  padding: 0;
+  width: 11em;
+}
+
+fieldset > ul > li.vertical-options > ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 12em;
+}
+
+fieldset > ul > li.vertical-options > ul > li {
+  margin-top: 0.25em;
+}
+
+.aside > ul.errors {
+  color: #666;
+  font-size: 0.75em;
+  margin-right: 0;
+  margin-bottom: 0;
+}

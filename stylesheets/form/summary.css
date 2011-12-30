@@ -1,0 +1,77 @@
+#summary {
+  position: absolute;
+  top: -1px;
+  left: 50em;
+  margin: 0;
+  padding: 0;
+  width: 10.75em;
+  border: thin solid #333;
+}
+
+#i18n > ul {
+  border-bottom: thin solid #333;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#i18n > ul > li > label {
+  display: block;
+  color: #999;
+  margin: 0;
+  padding: 0.5em 0.5em 0.5em 2em;
+  cursor: pointer;
+}
+
+#i18n > ul > li > label.active {
+  background-color: #eee;
+  color: #333;
+}
+
+#i18n > ul > li > label:hover,
+#i18n > ul > li > label.active:hover {
+  background-color: #dfdfdf;
+  color: #333;
+}
+
+#language_en > label,
+#language_pl > label {
+  background-repeat: no-repeat;
+  background-position: 9px;
+}
+
+#language_en > label {
+  background-image: url('../../images/en.gif');
+}
+
+#language_pl > label {
+  background-image: url('../../images/pl.gif');
+}
+
+#language > li > label > input[type='radio'],
+#currency > li > label > input[type='radio'] {
+  display: none;
+}
+
+#summary_checkout {
+  border-bottom: thin solid #333;
+}
+
+#summary_checkout_label {
+  display: block;
+  padding: 0.5em;
+}
+
+#summary_checkout_input {
+  background: white;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  width: 9.75em;
+}
+
+#summary_submit_input {
+  display: block;
+  margin: 1em auto;
+  width: 80%
+}
